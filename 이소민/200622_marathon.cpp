@@ -13,8 +13,10 @@ string solution(vector<string> participant, vector<string> completion) {
 		if(participant[i].compare(completion[i]))
 			return participant[i];
 	}
-	
+	// 다른게 보이면 완주하지 못한 참여자임	
+
 	return participant[participant.size()-1];
+	// 마지막 참여자가 완주 못한 선수인 경우
 }
 
 int main(int argc, char** argv) {
