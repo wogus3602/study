@@ -18,8 +18,3 @@ string solution(vector<string> participant, vector<string> completion) {
 	return participant[participant.size()-1];
 	// 마지막 참여자가 완주 못한 선수인 경우
 }
-
-int main(int argc, char** argv) {
-	vector<string> participant, completion;
-	solution(participant, completion);
-}
