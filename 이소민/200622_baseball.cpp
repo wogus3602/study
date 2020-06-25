@@ -39,6 +39,7 @@ vector<int> split(vector<int> baseball) {
 	
 	newvec[0] = baseball[0] / 100;
 	newvec[1] = baseball[0] / 10 % 10;
+	// 괄호 붙이기!
 	newvec[2] = baseball[0] % 10;
 	newvec[3] = baseball[1];
 	newvec[4] = baseball[2];
