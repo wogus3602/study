@@ -2,8 +2,21 @@
 #include <vector>
 
 using namespace std;
+bool compare(vector<int> baseball, vector<int> guess);
+vector<int> split(vector<int> baseball);
+int solution(vector< vector<int> > baseball);
+
+int main(int argc, char** argv) {
+	vector< vector<int> > baseball = {
+		{123,1,1},
+		{356,1,0},
+		{327,2,0},
+		{489,0,1}
+	};
+}
 
 bool compare(vector<int> baseball, vector<int> guess ) {
+// ball, strike 개수 맞는지 비교하기
 	int strike = 0;
 	int ball = 0;
 
@@ -20,12 +33,13 @@ bool compare(vector<int> baseball, vector<int> guess ) {
 }
 
 vector<int> split(vector<int> baseball) {
-// 벡터 쪼개
+// 벡터 쪼개기 
 	vector<int> newvec;
 	newvec.resize(5);
 	
 	newvec[0] = baseball[0] / 100;
 	newvec[1] = baseball[0] / 10 % 10;
+	// 괄호 붙이기!
 	newvec[2] = baseball[0] % 10;
 	newvec[3] = baseball[1];
 	newvec[4] = baseball[2];
@@ -34,8 +48,8 @@ vector<int> split(vector<int> baseball) {
 }
 
 int solution(vector< vector<int> > baseball) {
-	int answer = 0;
-	vector<int> guess(3,0);			// 추측되는 야구공 위치
+	int answer = 0;				// 추측이 맞은 거 개수
+	vector<int> guess(3,0);		// 추측되는 야구공 위치
 	bool flag = false;			// 맞았는지 틀렸는지 검사할 때 사용
 	int bSize = baseball.size();
 
@@ -67,13 +81,3 @@ int solution(vector< vector<int> > baseball) {
 	
 	return answer;
 }
-
-int main(int argc, char** argv) {
-	vector< vector<int> > baseball = {
-		{123,1,1},
-		{356,1,0},
-		{327,2,0},
-		{489,0,1}
-	};
-}
-

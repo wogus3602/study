@@ -4,7 +4,8 @@
 
 using namespace std;
 
-int solution(vector<vector<int>> board, vector<int> moves) {
+int solution(std::vector<std::vector<int>> board, std::vector<int> moves) {
+	
 	int answer = 0;
 	int i;
 	int board_size = board.size();
