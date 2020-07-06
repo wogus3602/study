@@ -21,11 +21,9 @@ int main() {
 
   cin >> bin;
 
-  cout << (3 - bin.size()) % 3 << endl;
+  bin.insert(0, (102 - bin.size()) % 3, '0');
 
-  bin.insert(0, (3 - bin.size()) % 3, '0');
-
-  cout << bin << endl;
+  cout << (102 - bin.size()) % 3 << endl;
 
   for (int i = 0; i < (bin.size() / 3); ++i) {
     oct += bin_to_oct.find(bin.substr(i * 3, 3))->second;
